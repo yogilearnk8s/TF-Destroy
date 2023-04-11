@@ -18,9 +18,9 @@ pipeline {
       }
     }
 	
-    stage('k8s-infra-deploy') {
+    stage('k8s-infra-destroy') {
       steps {
-        sh 'terraform apply -input=false -auto-approve'
+        sh 'terraform destroy'
 	      
       }
     }
