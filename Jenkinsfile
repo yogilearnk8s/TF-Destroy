@@ -20,7 +20,7 @@ pipeline {
 	
     stage('k8s-infra-destroy') {
       steps {
-        sh 'terraform destroy'
+        sh 'terraform destroy --auto-approve'
 	      
       }
     }
